@@ -4,17 +4,15 @@ import (
 	"fmt"
 )
 
-type html struct{ HTML string }
-type web struct{ WEB string }
-type pr struct{ PR string }
-type seo struct{ SEO string }
-type lawyer struct{ LAWYER string }
+type html struct{ HTML string }     // создаю структуру html и помечаю ее как тип string с названием HTML
+type web struct{ WEB string }       // создаю структуру web и помечаю ее как тип string с названием WEB
+type pr struct{ PR string }         // создаю структуру pr и помечаю ее как тип string с названием PR
+type seo struct{ SEO string }       // создаю структуру seo и помечаю ее как тип string с названием SEO
+type lawyer struct{ LAWYER string } //создаю структуру lawyer и помечаю ее как тип string с названием LAWYER
 
 type People struct {
-	name       string
-	age        int
-	freelance  string
-	stationary string
+	name, freelance, stationary string
+	age                         int
 	html
 	pr
 	seo
@@ -23,8 +21,8 @@ type People struct {
 }
 
 type Worker struct {
-	//freelance  string
-	//stationary string
+	freelance  string
+	stationary string
 	People
 }
 
